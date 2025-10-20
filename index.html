@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Almuerzo Exclusivo: Crecimiento y Estrategia con IA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        :root {
+            --sf-blue: #00A1E0; /* Azul Salesforce */
+        }
+        .sf-blue-bg {
+            background-color: var(--sf-blue) !important;
+        }
+        .sf-blue-text {
+            color: var(--sf-blue) !important;
+        }
+        .btn-sf {
+            background-color: var(--sf-blue);
+            border-color: var(--sf-blue);
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .btn-sf:hover {
+            background-color: #008cd1; /* Un tono más oscuro */
+            border-color: #008cd1;
+            color: white;
+        }
+        .form-control:focus {
+            border-color: var(--sf-blue);
+            box-shadow: 0 0 0 0.25rem rgba(0, 161, 224, 0.25);
+        }
+        /* Sombra sutil para las cards importantes */
+        .sf-card-shadow {
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        }
+        /* Estilo para la sección de cabecera tipo Jumbotron moderno */
+        .hero-section {
+            padding: 80px 0;
+            background-color: #f8f9fa; /* Fondo gris claro para contraste */
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-light bg-light border-bottom">
+        <div class="container">
+            <a class="navbar-brand text-secondary" href="#">
+                <span class="sf-blue-text fw-bold">EVENTO</span> | LÍDERES DE CONSUMO CHILE
+            </a>
+            <span class="navbar-text">
+                <button type="button" class="btn btn-outline-secondary btn-sm" onclick="document.getElementById('registro-form').scrollIntoView();">
+                    Regístrate Aquí
+                </button>
+            </span>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1 class="display-3 fw-bold sf-blue-text">
+                        Crecimiento Acelerado:
+                    </h1>
+                    <h2 class="display-5 fw-light mb-4">
+                        Estrategias de Ejecución Comercial con <span class="badge bg-info">IA</span>
+                    </h2>
+                    <p class="lead">Un almuerzo privado y exclusivo diseñado para **líderes de Consumo Masivo en Chile**. Analizaremos cómo la Inteligencia Artificial de próxima generación está optimizando las rutas de venta y elevando el rendimiento comercial.</p>
+                    <div class="mt-4">
+                        <span class="badge rounded-pill text-bg-primary me-2">#LíderesCM</span>
+                        <span class="badge rounded-pill text-bg-secondary me-2">#EjecuciónIA</span>
+                        <span class="badge rounded-pill text-bg-secondary">#EstrategiaChile</span>
+                    </div>
+                </div>
+                <div class="col-lg-5 mt-4 mt-lg-0">
+                    <div class="card p-3 sf-card-shadow border-0" id="registro-form">
+                        <div class="card-body">
+                            <h4 class="card-title text-center mb-3 fw-bold">Solicitud de invitación</h4>
+<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D5w000003XOQ6" method="POST">
+
+                                <input type=hidden name="orgid" value="00D5w000003XOQ6">
+                                <input type=hidden name="retURL" value="subpaginas/gracias.html">
+                                <input type="hidden" name="leadsource" value="Evento"> 
+                                
+                                <div class="mb-2">
+                                    <input id="first_name" maxlength="40" name="first_name" size="20" type="text" class="form-control" placeholder="Nombre" required />
+                                </div>
+                                <div class="mb-2">
+                                    <input id="last_name" maxlength="80" name="last_name" size="20" type="text" class="form-control" placeholder="Apellido" required />
+                                </div>
+                                <div class="mb-2">
+                                    <input id="title" maxlength="40" name="title" size="20" type="text" class="form-control" placeholder="Cargo" required />
+                                </div>
+                                <div class="mb-2">
+                                    <input id="company" maxlength="80" name="company" size="20" type="text" class="form-control" placeholder="Empresa" required />
+                                </div>
+                                <div class="mb-2">
+                                    <input id="email" maxlength="80" name="email" size="20" type="email" class="form-control" placeholder="Email Corporativo" required />
+                                </div>
+                                <div class="mb-3">
+                                    <input id="phone" maxlength="40" name="phone" size="20" type="tel" class="form-control" placeholder="Teléfono" />
+                                </div>
+                                
+                                <input type="hidden" id="lead_source" name="lead_source" value="Evento_Chile_IA_Almuerzo" />
+                                
+                                <button type="submit" name="submit" class="btn btn-sf w-100 py-2 fw-bold">CONFIRMAR ASISTENCIA EXCLUSIVA</button>
+                                <small class="text-muted d-block text-center mt-2">Plazas limitadas. El registro no garantiza la confirmación final.</small>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h3 class="text-center mb-4 sf-blue-text">Detalles clave del encuentro</h3>
+                <div class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="fw-bold"><i class="bi bi-calendar-event me-2 sf-blue-text"></i> Fecha y Hora</div>
+                        <span class="text-muted">Jueves, 13 de Noviembre | 13:00 PM (Almuerzo)</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="fw-bold"><i class="bi bi-geo-alt me-2 sf-blue-text"></i> Ubicación</div>
+                        <span class="text-muted">Rubaiyat, Región Metropolitana, Chile (A confirmar)</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="fw-bold"><i class="bi bi-trophy me-2 sf-blue-text"></i> Foco del Debate</div>
+                        <span class="text-muted">Maximización del Retorno de la Ejecución Comercial con IA</span>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="my-5 opacity-25">
+
+    <section class="container py-5">
+        <h2 class="text-center mb-5 fw-bold sf-blue-text">Quiénes liderarán el debate</h2>
+        <div class="row justify-content-center">
+            
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 text-center border-0 sf-card-shadow">
+                    <div class="card-body">
+                        <i class="bi bi-person-circle display-4 sf-blue-text mb-3"></i>
+                        <h5 class="card-title fw-bold">Gerardo Lagos</h5>
+                        <p class="card-subtitle mb-2 text-muted">Vurpix</p>
+                        <p class="card-text small">Visión estratégica sobre la optimización de procesos de venta y cómo la data en tiempo real transforma la toma de decisiones del C-Level.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 text-center border-0 sf-card-shadow">
+                    <div class="card-body">
+                        <i class="bi bi-person-circle display-4 sf-blue-text mb-3"></i>
+                        <h5 class="card-title fw-bold">Ignacio Ravotti</h5>
+                        <p class="card-subtitle mb-2 text-muted">Director de Soluciones CG | C-Tech</p>
+                        <p class="card-text small">Detalles técnicos y casos de éxito en la implementación de modelos de Inteligencia Artificial para la predicción de demanda y gestión de inventario en retail.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 text-center border-0 sf-card-shadow">
+                    <div class="card-body">
+                        <i class="bi bi-person-circle display-4 sf-blue-text mb-3"></i>
+                        <h5 class="card-title fw-bold">Salesforce´s Team</h5>
+                        <p class="card-subtitle mb-2 text-muted">Especialistas en Consumer Goods Cloud | Salesforce</p>
+                        <p class="card-text small">Presentación sobre la arquitectura de la nube de Salesforce (Data Cloud y Service Cloud) para una experiencia comercial 360 en el sector CPG.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="my-5 opacity-25">
+
+    <section class="container py-5">
+        <h3 class="text-center mb-4 text-muted">Organizado por</h3>
+        <div class="row text-center align-items-center g-4">
+            <div class="col-md-4 col-sm-12">
+                <img src="img/logovurpix.png" alt="Logo de Vurpix" class="img-fluid opacity-75" style="max-height: 70px;">
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <img src="img/logoctech.png" alt="Logo de C-Tech" class="img-fluid opacity-75" style="max-height: 70px;">
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <img src="img/logopartner.png" alt="Logo de Salesforce" class="img-fluid" style="max-height: 50px;"> 
+            </div>
+        </div>
+    </section>
+    
+    <footer class="sf-blue-bg text-white py-3 mt-5">
+        <div class="container text-center">
+            <p class="mb-0 small">&copy; 2025 Almuerzo Exclusivo para Líderes de Consumo Masivo | Powered by Vurpix & C-Tech.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('salesforceForm');
+            const emailField = document.getElementById('email');
+            
+            // Dominios de email públicos a bloquear (puedes agregar más)
+            const blockedDomains = [
+                '@gmail.com',
+                '@hotmail.com',
+                '@outlook.com',
+                '@yahoo.com',
+                '@live.com',
+                '@terra.cl',
+                '@grupobestmail.com',
+                '@aol.com',
+                '@protonmail.com'
+            ];
+
+            form.addEventListener('submit', function(event) {
+                let isInvalid = false;
+                const emailValue = emailField.value.toLowerCase();
+                
+                // 1. Validación de dominio de email
+                let isPublicDomain = blockedDomains.some(domain => emailValue.endsWith(domain));
+
+                if (isPublicDomain) {
+                    emailField.classList.add('is-invalid');
+                    document.getElementById('email-feedback').textContent = "Por favor, use un email corporativo (no aceptamos dominios públicos).";
+                    isInvalid = true;
+                } else {
+                    emailField.classList.remove('is-invalid');
+                    emailField.classList.add('is-valid');
+                }
+
+                // 2. Validación de campos requeridos de Bootstrap
+                Array.from(form.elements).forEach(function(element) {
+                    if (element.required && element.value.trim() === '') {
+                        element.classList.add('is-invalid');
+                        isInvalid = true;
+                    } else if (element.required) {
+                        element.classList.remove('is-invalid');
+                    }
+                });
+
+
+                if (isInvalid) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+
+                form.classList.add('was-validated');
+
+            }, false);
+        });
+    </script>
+</body>
+</html>
