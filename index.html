@@ -75,43 +75,48 @@
                         <span class="badge rounded-pill text-bg-secondary">#EstrategiaChile</span>
                     </div>
                 </div>
-                <div class="col-lg-5 mt-4 mt-lg-0">
-                    <div class="card p-3 sf-card-shadow border-0" id="registro-form">
-                        <div class="card-body">
-                            <h4 class="card-title text-center mb-3 fw-bold">Solicitud de invitación</h4>
-<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D5w000003XOQ6" method="POST">
+<div class="col-lg-5 mt-4 mt-lg-0">
+    <div class="card p-3 sf-card-shadow border-0" id="registro-form">
+        <div class="card-body">
+            <h4 class="card-title text-center mb-3 fw-bold">Solicitud de invitación</h4>
+            
+            <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D5w000003XOQ6" method="POST" id="salesforceForm" novalidate>
 
-                                <input type=hidden name="orgid" value="00D5w000003XOQ6">
-                                <input type=hidden name="retURL" value="https://cambalachetechnologies.github.io/almuerzo/subpaginas/gracias.html">
-                                <input type="hidden" name="leadsource" value="Evento"> 
-                                
-                                <div class="mb-2">
-                                    <input id="first_name" maxlength="40" name="first_name" size="20" type="text" class="form-control" placeholder="Nombre" required />
-                                </div>
-                                <div class="mb-2">
-                                    <input id="last_name" maxlength="80" name="last_name" size="20" type="text" class="form-control" placeholder="Apellido" required />
-                                </div>
-                                <div class="mb-2">
-                                    <input id="title" maxlength="40" name="title" size="20" type="text" class="form-control" placeholder="Cargo" required />
-                                </div>
-                                <div class="mb-2">
-                                    <input id="company" maxlength="80" name="company" size="20" type="text" class="form-control" placeholder="Empresa" required />
-                                </div>
-                                <div class="mb-2">
-                                    <input id="email" maxlength="80" name="email" size="20" type="email" class="form-control" placeholder="Email Corporativo" required />
-                                </div>
-                                <div class="mb-3">
-                                    <input id="phone" maxlength="40" name="phone" size="20" type="tel" class="form-control" placeholder="Teléfono" />
-                                </div>
-                                
-                                <input type="hidden" id="lead_source" name="lead_source" value="Evento_Chile_IA_Almuerzo" />
-                                
-                                <button type="submit" name="submit" class="btn btn-sf w-100 py-2 fw-bold">CONFIRMAR ASISTENCIA EXCLUSIVA</button>
-                                <small class="text-muted d-block text-center mt-2">Plazas limitadas. El registro no garantiza la confirmación final.</small>
-                            </form>
-                        </div>
-                    </div>
+                <input type=hidden name="orgid" value="00D5w000003XOQ6">
+                <input type=hidden name="retURL" value="https://cambalachetechnologies.github.io/almuerzo/subpaginas/gracias.html">
+                
+                <input type="hidden" name="leadsource" value="Evento"> 
+                
+                <div class="mb-2">
+                    <input id="first_name" maxlength="40" name="first_name" size="20" type="text" class="form-control" placeholder="Nombre" required />
+                    <div class="invalid-feedback">El nombre es obligatorio.</div>
                 </div>
+                <div class="mb-2">
+                    <input id="last_name" maxlength="80" name="last_name" size="20" type="text" class="form-control" placeholder="Apellido" required />
+                    <div class="invalid-feedback">El apellido es obligatorio.</div>
+                </div>
+                <div class="mb-2">
+                    <input id="title" maxlength="40" name="title" size="20" type="text" class="form-control" placeholder="Cargo" required />
+                    <div class="invalid-feedback">El cargo es obligatorio.</div>
+                </div>
+                <div class="mb-2">
+                    <input id="company" maxlength="80" name="company" size="20" type="text" class="form-control" placeholder="Empresa" required />
+                    <div class="invalid-feedback">La empresa es obligatoria.</div>
+                </div>
+                <div class="mb-2">
+                    <input id="email" maxlength="80" name="email" size="20" type="email" class="form-control" placeholder="Email Corporativo" required />
+                    <div class="invalid-feedback" id="email-feedback">Debe ser un email corporativo (no @gmail, @hotmail, etc.).</div> 
+                </div>
+                <div class="mb-3">
+                    <input id="phone" maxlength="40" name="phone" size="20" type="tel" class="form-control" placeholder="Teléfono" />
+                </div>
+                
+                <button type="submit" name="submit" class="btn btn-sf w-100 py-2 fw-bold">CONFIRMAR ASISTENCIA EXCLUSIVA</button>
+                <small class="text-muted d-block text-center mt-2">Plazas limitadas. El registro no garantiza la confirmación final.</small>
+            </form>
+        </div>
+    </div>
+</div>
             </div>
         </div>
     </header>
