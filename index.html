@@ -719,115 +719,56 @@
 
 
 
-        // --- Lógica de Validación de Email Empresarial ---
+    // --- Lógica de Validación de Email Empresarial (Corregida y Optimizada) ---
 
-        document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function() {
+        // Ahora sí existe la ID 'salesforceForm' gracias al paso 1
+        const form = document.getElementById('salesforceForm');
+        const emailField = document.getElementById('email');
+        const feedbackDiv = document.getElementById('email-feedback');
+        
+        // Dominios de email públicos a bloquear
+        const blockedDomains = [
+            '@gmail.com', '@hotmail.com', '@outlook.com', '@yahoo.com',
+            '@live.com', '@aol.com', '@protonmail.com', '@icloud.com'
+        ];
 
-            const form = document.getElementById('salesforceForm');
-
-            const emailField = document.getElementById('email');
-
+        form.addEventListener('submit', function(event) {
             
+            // Si el formulario falla la validación nativa de Bootstrap (campos vacíos), prevenimos el envío.
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
 
-            // Dominios de email públicos a bloquear
+            const emailValue = emailField.value.toLowerCase();
+            let isPublicDomain = blockedDomains.some(domain => emailValue.endsWith(domain));
 
-            const blockedDomains = [
-
-                '@gmail.com',
-
-                '@hotmail.com',
-
-                '@outlook.com',
-
-                '@yahoo.com',
-
-                '@live.com',
-
-                '@aol.com',
-
-                '@protonmail.com',
-
-                '@icloud.com'
-
-            ];
-
-
-
-            form.addEventListener('submit', function(event) {
-
-                let isInvalid = false;
-
-                const emailValue = emailField.value.toLowerCase();
-
-                
-
-                // 1. Validación de dominio de email
-
-                let isPublicDomain = blockedDomains.some(domain => emailValue.endsWith(domain));
-
-
-
-                if (isPublicDomain) {
-
-                    emailField.classList.add('is-invalid');
-
-                    document.getElementById('email-feedback').textContent = "Por favor, use un email corporativo (no aceptamos dominios públicos).";
-
-                    isInvalid = true;
-
-                    // Prevenir el envío si falla la validación del dominio
-
-                    event.preventDefault(); 
-
-                    event.stopPropagation();
-
-                } else {
-
-                    emailField.classList.remove('is-invalid');
-
-                }
-
-                
-
-                // Si la validación JS falló, detenemos el proceso
-
-                if (isInvalid) return;
-
-
-
-
-
-                // 2. Validación nativa de Bootstrap para el resto de los campos requeridos
-
-                if (!form.checkValidity()) {
-
-                    event.preventDefault();
-
-                    event.stopPropagation();
-
-                }
-
-
-
-                form.classList.add('was-validated');
-
-
-
-            }, false);
-
+            // Reiniciar estado de validación personalizada
+            emailField.classList.remove('is-invalid');
             
+            if (isPublicDomain) {
+                
+                // Si el dominio es público, prevenimos el envío y mostramos el error personalizado.
+                event.preventDefault(); 
+                event.stopPropagation();
+                
+                emailField.classList.add('is-invalid');
+                feedbackDiv.textContent = "Por favor, use un email corporativo (no aceptamos dominios públicos).";
+            }
+            
+            // Agregar la clase para mostrar los mensajes de feedback de Bootstrap
+            form.classList.add('was-validated');
 
-            // Limpiar la validación al escribir
-
-            emailField.addEventListener('input', function() {
-
-                emailField.classList.remove('is-invalid');
-
-                document.getElementById('email-feedback').textContent = "Por favor, use un email corporativo (no aceptamos dominios públicos).";
-
-            });
-
+        }, false);
+        
+        // Limpiar el estado de 'is-invalid' mientras el usuario escribe
+        emailField.addEventListener('input', function() {
+            emailField.classList.remove('is-invalid');
+            // Mantenemos el mensaje de feedback original para cuando la validación nativa falle
+            feedbackDiv.textContent = "Por favor, use un email corporativo (no aceptamos dominios públicos).";
         });
+    });
 
     </script>
 
