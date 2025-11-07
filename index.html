@@ -1,777 +1,383 @@
 <!doctype html>
-
 <html lang="es">
 
 <head>
-
     <meta charset="utf-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>FMCG Event | Crecimiento Acelerado</title>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
     
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-
-
     <style>
-
         :root {
-
-            --primary-it: #007bff; /* Azul IT */
-
+            --primary-it: #007bff;
             --secondary-it: #6c757d;
-
-            --accent-it: #00bcd4; /* Cian para el acento IA */
-
+            --accent-it: #00bcd4;
         }
-
         body {
-
             font-family: 'Poppins', sans-serif;
-
             background-color: #f8f9fa;
-
         }
-
         .bg-primary-it {
-
             background-color: var(--primary-it) !important;
-
         }
-
         .text-primary-it {
-
             color: var(--primary-it) !important;
-
         }
-
         .btn-it {
-
             background-color: var(--primary-it);
-
             border-color: var(--primary-it);
-
             color: white;
-
             transition: all 0.3s;
-
         }
-
         .btn-it:hover {
-
             background-color: #0056b3; 
-
             border-color: #0056b3;
-
             color: white;
-
             transform: translateY(-2px);
-
         }
-
         .form-control:focus {
-
             border-color: var(--primary-it);
-
             box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
-
         }
-
-        /* Sombra moderna para tarjetas */
-
         .it-card-shadow {
-
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-
         }
-
-        /* Estilo para la sección Hero, simulando un fondo de código */
-
         .hero-section {
-
-            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url('img/operators-guild-SDTUko_lDqU-unsplash.jpg'); /* Imagen de fondo IT */
-
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url('img/operators-guild-SDTUko_lDqU-unsplash.jpg');
             background-size: cover;
-
             background-position: center;
-
             padding: 80px 0;
-
             color: white;
-
             position: relative;
-
         }
-
         .countdown-box {
-
             background-color: white;
-
             color: #343a40;
-
             padding: 20px;
-
             border-radius: 8px;
-
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-
             font-weight: 600;
-
         }
-
-        /* Estilos específicos para los logos en el Navbar (Ajustado para fondo claro) */
-
         .logo-nav {
-
             max-height: 35px; 
-
             margin-right: 15px;
-
             opacity: 1;
-
             transition: opacity 0.3s;
-
         }
-
         .logo-nav:hover {
-
             opacity: 0.8;
-
         }
-
-        /* Estilo para la imagen del speaker */
-
         .speaker-img {
-
             width: 120px;
-
             height: 120px;
-
-            border-radius: 50%; /* Foto circular */
-
+            border-radius: 50%;
             object-fit: cover;
-
             margin-bottom: 15px;
-
             border: 4px solid var(--primary-it);
-
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
         }
-
-        /* Navbar blanco (Nuevo estilo) */
-
         .navbar-light-custom {
-
             background-color: white !important;
-
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra sutil */
-
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         }
-
-        /* Estilos del Acordeón para el Temario */
-
         .accordion-button:not(.collapsed) {
-
             color: var(--primary-it);
-
             background-color: #e7f1ff;
-
             box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
-
         }
-
         .accordion-button:focus {
-
             border-color: var(--primary-it);
-
             box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
-
         }
-
     </style>
-
 </head>
 
 <body>
 
-
-
     <nav class="navbar navbar-expand-lg navbar-light-custom sticky-top">
-
         <div class="container">
-
             <a class="navbar-brand d-flex align-items-center" href="#">
-
                 <img src="img/logoctech.png" alt="Logo de C-Tech" class="logo-nav">
-
                 <img src="img/logovurpix.png" alt="Logo de Vurpix" class="logo-nav">
-
                 <span class="text-muted fw-light small ms-2 d-none d-md-block">| Evento Líderes FMCG</span>
-
             </a>
-
             <button type="button" class="btn btn-it fw-bold" onclick="document.getElementById('registro-form').scrollIntoView({ behavior: 'smooth' });">
-
                 <i class="bi bi-person-check-fill me-1"></i> Registrarse
-
             </button>
-
         </div>
-
     </nav>
-
     
-
     <header class="hero-section">
-
         <div class="container py-5">
-
             <div class="row align-items-center">
-
                 <div class="col-lg-7 text-center text-lg-start mb-4 mb-lg-0">
-
                     <span class="badge rounded-pill bg-info text-dark mb-3 fs-6 p-2 fw-bold"><i class="bi bi-robot me-1"></i> Consumer Goods: CUMBRE IA</span>
-
                     <h1 class="display-3 fw-bold mb-3" style="color: var(--accent-it);">
-
                         Acelera el crecimiento:
-
                     </h1>
-
                     <h2 class="display-6 fw-light mb-4 text-white">
-
                         Estrategias de ejecución comercial con <strong class="text-warning">Inteligencia Artificial</strong>
-
                     </h2>
-
                     <p class="lead mb-0">Un encuentro exclusivo para **líderes de Consumo Masivo en Chile**. Analizaremos casos de éxito y soluciones de IA de próxima generación que están redefiniendo las rutas de venta y la rentabilidad comercial.</p>
-
                     <div class="mt-4">
-
                         <span class="badge text-bg-secondary me-2">#Leaders</span>
-
                         <span class="badge text-bg-secondary me-2">#InnovaciónCM</span>
-
                     </div>
-
                 </div>
-
-
 
                 <div class="col-lg-5">
-
                     <div class="card p-3 it-card-shadow border-0" id="registro-form">
-
                         <div class="card-body">
-
                             <h4 class="card-title text-center mb-4 fw-bold text-primary-it">Solicitud de Invitación VIP</h4>
-
-                                <form class="contact-form"
-
+                            <form id="salesforceForm" class="contact-form"
                             action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D5w000003XOQ6"
-
-                              method="POST">                                
-
-                                <input type="hidden" name="oid" value="00D5w000003XOQ6">
-
-                                <input type="hidden" name="retURL" value="https://cambalachetechnologies.github.io/almuerzo/subpaginas/gracias.html"> 
-
-                                <input type="hidden" name="lead_source" value="Campaña"> 
-
+                                method="POST">
                                 
-
+                                <input type="hidden" name="oid" value="00D5w000003XOQ6">
+                                <input type="hidden" name="retURL" value="https://cambalachetechnologies.github.io/almuerzo/subpaginas/gracias.html"> 
+                                <input type="hidden" name="lead_source" value="Campaña"> 
+                                
                                 <div class="row g-2">
-
                                     <div class="col-md-6 mb-2">
-
                                         <input name="first_name" type="text" class="form-control" placeholder="Nombre" required>
-
                                     </div>
-
                                     <div class="col-md-6 mb-2">
-
                                         <input name="last_name" type="text" class="form-control" placeholder="Apellido" required>
-
                                     </div>
-
                                     
-
                                     <div class="col-12 mb-2">
-
                                         <input name="email" type="email" class="form-control" placeholder="Email corporativo" id="email" required>
-
-                                        <div class="invalid-feedback" id="email-feedback">
-
-                                            Por favor, use un email corporativo (no aceptamos dominios públicos).
-
                                         </div>
 
-                                    </div>
-
-
-
                                     <div class="col-md-6 mb-2">
-
                                         <input name="company" type="text" class="form-control" placeholder="Empresa " required>
-
                                     </div>
-
                                     
-
                                     <div class="col-md-6 mb-2">
-
                                         <input name="mobile" type="tel" class="form-control" placeholder="Teléfono Móvil" required
-
-                                               title="Ingrese su número de teléfono móvil" />
-
+                                                title="Ingrese su número de teléfono móvil" />
                                     </div>
-
                                 </div>
-
                                 
-
                                 <div class="d-grid mt-4">
-
                                     <button type="submit" name="submit" class="btn btn-it w-100 py-2 fw-bold">
-
                                         RESERVAR MI PLAZA EXCLUSIVA
-
                                     </button>
-
                                 </div>
-
                                 
-
                                 <small class="text-muted d-block text-center mt-3 small">
-
                                     Sus datos serán mantenidos en privacidad. Lo contactaremos por WhatsApp para confirmar su asistencia. <br> Cupos limitados para C-Level.
-
                                 </small>
-
                             </form>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </header>
 
-
-
     <section class="py-5 bg-white border-bottom">
-
         <div class="container text-center">
-
             <h2 class="mb-4 fw-bold">El almuerzo comienza en:</h2>
-
             <div class="row justify-content-center" id="countdown">
-
                 <div class="col-6 col-md-2 mb-3">
-
                     <div class="countdown-box border border-primary-it">
-
                         <div class="display-4" id="days">00</div>
-
                         <small class="text-muted">Días</small>
-
                     </div>
-
                 </div>
-
                 <div class="col-6 col-md-2 mb-3">
-
                     <div class="countdown-box border border-primary-it">
-
                         <div class="display-4" id="hours">00</div>
-
                         <small class="text-muted">Horas</small>
-
                     </div>
-
                 </div>
-
                 <div class="col-6 col-md-2 mb-3">
-
                     <div class="countdown-box border border-primary-it">
-
                         <div class="display-4" id="minutes">00</div>
-
                         <small class="text-muted">Minutos</small>
-
                     </div>
-
                 </div>
-
                 <div class="col-6 col-md-2 mb-3">
-
                     <div class="countdown-box border border-primary-it">
-
                         <div class="display-4" id="seconds">00</div>
-
                         <small class="text-muted">Segundos</small>
-
                     </div>
-
                 </div>
-
             </div>
-
             <p class="mt-3 fs-5 text-muted">Jueves, 13 de Noviembre de 2025 | 13:00 a 15:00</p>
-
         </div>
-
     </section>
-
-
 
     <section class="container py-5" id="detalles">
-
         <div class="row justify-content-center">
-
             <div class="col-lg-10">
-
                 <h2 class="text-center mb-5 fw-bold text-primary-it">Detalles y logística del encuentro</h2>
-
                 <div class="row g-4">
-
                     <div class="col-md-6">
-
                         <div class="card h-100 p-3 border-0 it-card-shadow">
-
                             <div class="card-body">
-
                                 <h5 class="card-title fw-bold text-primary-it"><i class="bi bi-calendar-event me-2"></i> Fecha y Horario</h5>
-
                                 <p class="card-text">
-
                                     <strong class="text-dark">Jueves, 13 de Noviembre de 2025</strong><br>
-
                                     <span class="text-muted">Desde las **13:00 hasta las 15:00** (Almuerzo y Debate).
-
                                 </p>
-
                             </div>
-
                         </div>
-
                     </div>
-
-
 
                     <div class="col-md-6">
-
                         <div class="card h-100 p-3 border-0 it-card-shadow">
-
-<div class="card-body">
-    <h5 class="card-title fw-bold text-primary-it"><i class="bi bi-geo-alt-fill me-2"></i> Ubicación Exclusiva</h5>
-    <p class="card-text">
-        <strong class="text-dark">Restaurant Panchita</strong><br>
-        Av. Nueva Costanera 3979, Vitacura, Región Metropolitana, Chile.<br>
-        <span class="badge bg-success mt-2">Valet Parking Incluido</span>
-    </p>
-    <a href="https://maps.google.com/?cid=3933790354340322932&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNl" target="_blank" class="btn btn-primary mt-3">Ver en Maps</a>
-</div>
-
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold text-primary-it"><i class="bi bi-geo-alt-fill me-2"></i> Ubicación Exclusiva</h5>
+                                <p class="card-text">
+                                    <strong class="text-dark">Restaurant Panchita</strong><br>
+                                    Av. Nueva Costanera 3979, Vitacura, Región Metropolitana, Chile.<br>
+                                    <span class="badge bg-success mt-2">Valet Parking Incluido</span>
+                                </p>
+                                <a href="https://maps.google.com/?cid=3933790354340322932&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNl" target="_blank" class="btn btn-primary mt-3">Ver en Maps</a>
+                            </div>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
-
-
     <hr class="my-5 opacity-25">
-
-
 
     <section class="container py-5" id="speakers">
-
         <h2 class="text-center mb-5 fw-bold text-primary-it">Nuestros speakers expertos</h2>
-
         <div class="row justify-content-center g-4">
-
             
-
             <div class="col-lg-4 col-md-6">
-
                 <div class="card h-100 text-center border-0 it-card-shadow p-3">
-
                     <div class="card-body">
-
                         <img src="img/gerardolagos.jpeg" alt="Foto de Gerardo Lagos" class="speaker-img"> 
-
                         <h5 class="card-title fw-bold">Gerardo Lagos</h5>
-
                         <p class="card-subtitle mb-2 text-muted small fw-bold">Director Comercial Chile | Vurpix</p>
-
                         <p class="card-text small">Visión estratégica sobre la optimización de procesos de venta y cómo la data en tiempo real transforma la toma de decisiones del C-Level.</p>
-
                     </div>
-
                 </div>
-
             </div>
 
-
-
             <div class="col-lg-4 col-md-6">
-
                 <div class="card h-100 text-center border-0 it-card-shadow p-3">
-
                     <div class="card-body">
-
                         <img src="img/ignacioravotti.jpeg" alt="Foto de Ignacio Ravotti" class="speaker-img">
-
                         <h5 class="card-title fw-bold">Ignacio Ravotti</h5>
-
                         <p class="card-subtitle mb-2 text-muted small fw-bold">Director de Soluciones CG | C-Tech</p>
-
                         <p class="card-text small">Detalles técnicos y casos de éxito en la implementación de modelos de Inteligencia Artificial para la predicción de demanda y gestión de inventario en retail.</p>
-
                     </div>
-
                 </div>
-
             </div>
-
-
 
             <div class="col-lg-4 col-md-6">
-
                 <div class="card h-100 text-center border-0 it-card-shadow p-3">
-
                     <div class="card-body">
-
                         <i class="bi bi-lightning-charge-fill display-4 text-primary-it mb-3"></i>
-
                         <h5 class="card-title fw-bold">Salesforce's Team</h5>
-
                         <p class="card-subtitle mb-2 text-muted small fw-bold">Especialistas en Consumer Goods Cloud</p>
-
                         <p class="card-text small">Presentación sobre la arquitectura de la nube de Salesforce (Data Cloud y Service Cloud) para una experiencia comercial 360 en el sector CPG.</p>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
-
     
-
     <hr class="my-5 opacity-25">
 
-
-
     <section class="container py-5" id="temario">
-
-    <h2 class="text-center mb-5 fw-bold text-primary-it">Temas clave a debatir en la mesa</h2>
-
-    <div class="row justify-content-center">
-
-        <div class="col-lg-10">
-
-            <div class="accordion" id="temarioAccordion">
-
-                
-
-                <div class="accordion-item it-card-shadow mb-3">
-
-                    <h2 class="accordion-header" id="headingOne">
-
-                        <button class="accordion-button fw-bold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-
-                            <i class="bi bi-currency-dollar me-2"></i> 1. El ROI de la modernización digital en consumo masivo
-
-                        </button>
-
-                    </h2>
-
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#temarioAccordion">
-
-                        <div class="accordion-body">
-
-                        Cuantificando el costo oculto de la deuda técnica frente a la eficiencia y el Bajo TCO de plataformas especializadas como CG Cloud.
+        <h2 class="text-center mb-5 fw-bold text-primary-it">Temas clave a debatir en la mesa</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="accordion" id="temarioAccordion">
+                    
+                    <div class="accordion-item it-card-shadow mb-3">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button fw-bold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <i class="bi bi-currency-dollar me-2"></i> 1. El ROI de la modernización digital en consumo masivo
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#temarioAccordion">
+                            <div class="accordion-body">
+                                Cuantificando el costo oculto de la deuda técnica frente a la eficiencia y el Bajo TCO de plataformas especializadas como CG Cloud.
+                            </div>
                         </div>
-
                     </div>
 
-                </div>
-
-
-
-                <div class="accordion-item it-card-shadow mb-3">
-
-                    <h2 class="accordion-header" id="headingTwo">
-
-                        <button class="accordion-button collapsed fw-bold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-
-                            <i class="bi bi-speedometer2 me-2"></i> 2. La IA como motor de ganancia competitiva en FMCG
-
-                        </button>
-
-                    </h2>
-
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#temarioAccordion">
-
-                        <div class="accordion-body">
-
-                            Discusión estratégica: Cómo la Inteligencia Artificial entra en juego para ganar frente a la competencia. Exploraremos herramientas predictivas y de optimización de rutas que permiten a los equipos comerciales ser más rápidos y efectivos, capitalizando oportunidades en tiempo real.
-
+                    <div class="accordion-item it-card-shadow mb-3">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed fw-bold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <i class="bi bi-speedometer2 me-2"></i> 2. La IA como motor de ganancia competitiva en FMCG
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#temarioAccordion">
+                            <div class="accordion-body">
+                                Discusión estratégica: Cómo la Inteligencia Artificial entra en juego para ganar frente a la competencia. Exploraremos herramientas predictivas y de optimización de rutas que permiten a los equipos comerciales ser más rápidos y efectivos, capitalizando oportunidades en tiempo real.
+                            </div>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
-    </div>
-
-</section>
+    </section>
 
     <footer class="bg-dark text-white py-4 mt-5">
-
         <div class="container text-center">
-
-            <p class="mb-0 small">&copy; 2025 Evento Líderes FMCG | Liderazgo y Estrategia con IA. | Powered by C-Tech y Vurpix.</p>
-
+            <p class="mb-0 small">© 2025 Evento Líderes FMCG | Liderazgo y Estrategia con IA. | Powered by C-Tech y Vurpix.</p>
         </div>
-
     </footer>
 
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
     <script>
-
         // --- Lógica del Conteo Regresivo ---
-
         const eventDate = new Date("Nov 13, 2025 13:00:00").getTime();
 
-
-
         const updateCountdown = setInterval(function() {
-
             const now = new Date().getTime();
-
             const distance = eventDate - now;
 
-
-
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-
-
             // Mostrar el resultado en los elementos con IDs
-
             document.getElementById("days").innerHTML = days < 10 ? '0' + days : days;
-
             document.getElementById("hours").innerHTML = hours < 10 ? '0' + hours : hours;
-
             document.getElementById("minutes").innerHTML = minutes < 10 ? '0' + minutes : minutes;
-
             document.getElementById("seconds").innerHTML = seconds < 10 ? '0' + seconds : seconds;
 
-
-
             if (distance < 0) {
-
                 clearInterval(updateCountdown);
-
                 document.getElementById("countdown").innerHTML = '<h3 class="text-success">¡El evento ha comenzado!</h3>';
-
             }
-
         }, 1000);
 
+        // --- Lógica de Validación (Solo Bootstrap Nativo) ---
+        document.addEventListener('DOMContentLoaded', function() {
+            // Buscamos el formulario por la clase y le asignamos la ID para que el listener funcione.
+            const form = document.getElementById('salesforceForm');
 
-
-    // --- Lógica de Validación de Email Empresarial (Corregida y Optimizada) ---
-
-    document.addEventListener('DOMContentLoaded', function() {
-        // Ahora sí existe la ID 'salesforceForm' gracias al paso 1
-        const form = document.getElementById('salesforceForm');
-        const emailField = document.getElementById('email');
-        const feedbackDiv = document.getElementById('email-feedback');
-        
-        // Dominios de email públicos a bloquear
-        const blockedDomains = [
-            '@gmail.com', '@hotmail.com', '@outlook.com', '@yahoo.com',
-            '@live.com', '@aol.com', '@protonmail.com', '@icloud.com'
-        ];
-
-        form.addEventListener('submit', function(event) {
-            
-            // Si el formulario falla la validación nativa de Bootstrap (campos vacíos), prevenimos el envío.
-            if (!form.checkValidity()) {
-                event.preventDefault();
-                event.stopPropagation();
-            }
-
-            const emailValue = emailField.value.toLowerCase();
-            let isPublicDomain = blockedDomains.some(domain => emailValue.endsWith(domain));
-
-            // Reiniciar estado de validación personalizada
-            emailField.classList.remove('is-invalid');
-            
-            if (isPublicDomain) {
+            form.addEventListener('submit', function(event) {
                 
-                // Si el dominio es público, prevenimos el envío y mostramos el error personalizado.
-                event.preventDefault(); 
-                event.stopPropagation();
+                // Si el formulario falla la validación nativa (campos requeridos vacíos), detenemos el envío.
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
                 
-                emailField.classList.add('is-invalid');
-                feedbackDiv.textContent = "Por favor, use un email corporativo (no aceptamos dominios públicos).";
-            }
-            
-            // Agregar la clase para mostrar los mensajes de feedback de Bootstrap
-            form.classList.add('was-validated');
+                // Muestra los mensajes de error nativos de Bootstrap
+                form.classList.add('was-validated');
 
-        }, false);
-        
-        // Limpiar el estado de 'is-invalid' mientras el usuario escribe
-        emailField.addEventListener('input', function() {
-            emailField.classList.remove('is-invalid');
-            // Mantenemos el mensaje de feedback original para cuando la validación nativa falle
-            feedbackDiv.textContent = "Por favor, use un email corporativo (no aceptamos dominios públicos).";
+            }, false);
         });
-    });
 
     </script>
-
 </body>
 
 </html>
